@@ -37,6 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    'rest_auth',
+    'rest_auth.registration',
+
+    'crispy_forms',
+
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -113,8 +128,25 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = "accounts/login/"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Custom user model
+AUTH_USER_MODEL = "users.CustomUser"
+
+#Django Crispy Forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+#Django.contrib.sites
+SITE_ID = 10
+
+#Django-Allauth
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_EMAIL_REQUIRED = (True)
