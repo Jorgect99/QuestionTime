@@ -23,7 +23,7 @@ class AnswerSerializer(serializers.ModelSerializer):
 
 class QuestionSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField(read_only=True)
-    created_at = serializers.MethodField(read_only=True)
+    created_at = serializers.SerializerMethodField(read_only=True)
     slug = serializers.SlugField(read_only=True)
     answer_count = serializers.SerializerMethodField(read_only=True)
     user_has_answered = serializers.SerializerMethodField(read_only=True)
