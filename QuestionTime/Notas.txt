@@ -1,0 +1,3 @@
+Webpack Bundle Tracker and Django Webpack Loader:
+
+npm install --save-dev webpack-bundle-tracker@0.4.3
