@@ -17,9 +17,9 @@
                     </li>
                     <li class="nav-item mx-1">
                         <router-link
-                            :to="{ name: 'about' }"
+                            :to="{ name: 'home' }"
                             class="btn btn-sm btn-danger"
-                        >About
+                        >Add Question
                         </router-link>
                     </li>
                     
